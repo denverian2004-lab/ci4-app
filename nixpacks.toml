@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["php82", "php82Extensions.mysqlnd", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "php82Extensions.intl", "php82Extensions.gd", "php82Extensions.zip", "php82Extensions.opcache", "composer"]
-
-[phases.install]
-cmds = ["composer install --optimize-autoloader --no-scripts --no-interaction"]
-
-[start]
-cmd = "php spark migrate --no-interaction && php -S 0.0.0.0:$PORT -t public"
